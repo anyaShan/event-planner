@@ -4,7 +4,6 @@ import { ThemeProvider } from '@mui/system';
 import { Theme } from '../../theme';
 
 import { CommonLayout } from 'modules/common';
-import { StyledApp } from './App.styled';
 
 const EventsPage = lazy(() => import('modules/events/EventsPage'));
 const EventPage = lazy(() => import('modules/event/EventPage'));
@@ -20,18 +19,16 @@ export function App() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <StyledApp>
-        <Routes>
-          <Route path="/" element={<CommonLayout />}>
-            <Route index element={<EventsPage />} />
-            <Route path="events/:id" element={<EventPage />} />
-            {/* <Route path="events/:id/edit" element={<EditEventPage />} /> */}
-            <Route path="events/new" element={<NewEventPage />} />
+      <Routes>
+        <Route path="/" element={<CommonLayout />}>
+          <Route index element={<EventsPage />} />
+          <Route path="events/:id" element={<EventPage />} />
+          {/* <Route path="events/:id/edit" element={<EditEventPage />} /> */}
+          <Route path="events/new" element={<NewEventPage />} />
 
-            {/* <Route path="*" element={<NotFound />} /> */}
-          </Route>
-        </Routes>
-      </StyledApp>
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Route>
+      </Routes>
     </ThemeProvider>
   );
 }

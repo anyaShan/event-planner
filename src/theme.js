@@ -7,7 +7,7 @@ export const Theme = createTheme({
     desktop: `1280px`,
   },
   colors: {
-    backgroundBody: '#fdf7f2',
+    backgroundBody: '#FEFCFF',
     burgerBackground: '#fdf7f2',
     accent: '#ffa726',
     pageBackground: '#7F7F7F',
