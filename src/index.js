@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import { Provider } from 'react-redux';
 // import { PersistGate } from 'redux-persist/integration/react';
-// import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import { App } from 'components/App';
+import { App } from 'modules/app/App';
 // import { store, persistor } from './redux/store';
 import './index.css';
 
@@ -13,7 +13,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="event-planner">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
@@ -23,9 +25,9 @@ root.render(
 
 //       <PersistGate loading={null} persistor={persistor}>
 
-//         <BrowserRouter basename="event-planner">
-//           <App />
-//         </BrowserRouter>
+// <BrowserRouter basename="event-planner">
+//   <App />
+// </BrowserRouter>
 //       </PersistGate>
 //     </Provider>
 //   </React.StrictMode>
